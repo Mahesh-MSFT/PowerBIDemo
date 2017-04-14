@@ -23,7 +23,10 @@
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
     "Microsoft.IdentityModel.Clients.ActiveDirectory": "3.13.9",
     "Microsoft.Azure.KeyVault.Core": "2.0.4",
-    "Microsoft.PowerBI.JavaScript": "2.3.0"
+    "Microsoft.PowerBI.JavaScript": "2.3.0",
+    "System.Data.SqlClient": "4.4.0-beta-24911-08",
+    "Microsoft.AspNetCore.SignalR.Server": "0.2.0-preview2-22683",
+    "Microsoft.AspNetCore.WebSockets": "1.0.1"
   },
 
   "tools": {
