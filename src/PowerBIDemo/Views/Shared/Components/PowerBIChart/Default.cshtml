@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<script language="javascript" type="text/javascript">
+    var embedConfiguration = {
+        type: 'report',
+        accessToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXIiOiIwLjIuMCIsImF1ZCI6Imh0dHBzOi8vYW5hbHlzaXMud2luZG93cy5uZXQvcG93ZXJiaS9hcGkiLCJpc3MiOiJQb3dlciBCSSBOb2RlIFNESyIsInR5cGUiOiJlbWJlZCIsIndjbiI6Im1ha3NoLXBiaS13cy1jb2xsIiwid2lkIjoiNzY2NThjMTctZWZhZi00ZTBjLTgxMjQtNGY3M2I4NGRmNzE5IiwicmlkIjoiODEwNjE1ODQtNWE2ZC00NjQ4LThlMDgtZTIzNTZhZmVmMjAxIiwibmJmIjoxNDkyMTU1NDcwLCJleHAiOjE0OTIxNTkwNzB9.lWBDtDUjz2mWIdZG_eTgkg25-6N_2vk6xZEvnOg6v-I',
+        id: '81061584-5a6d-4648-8e08-e2356afef201',
+        embedUrl: 'https://embedded.powerbi.com/appTokenReportEmbed?reportId=81061584-5a6d-4648-8e08-e2356afef201?chromeless=true'
+    };
+
+    var $reportContainer = $('#reportContainer');
+
+    function loadPowerBI() {
+        var report = powerbi.embed($reportContainer.get(0), embedConfiguration);
+
+    };
+
+    setInterval(loadPowerBI, 1500);
+
+</script>
