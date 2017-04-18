@@ -6,13 +6,17 @@
         <h4>You are about to buy:</h4>
         <h1 id="newCartItemH1"></h1>
     </div>
+    <div id="nextPredictionDiv" class="col-md-4">
+        <h4>Next Prediction:</h4>
+        <h3 id="nextPredictionH1"></h3>
+    </div>
 </div>
 
 <div class="row">
     <div>
         <br />
         <div style="height:600px" id="reportContainer">
-            @Component.InvokeAsync("PowerBIChart").Result
+            @*@Component.InvokeAsync("PowerBIChart").Result*@
         </div>
     </div>
 </div>
@@ -26,6 +30,7 @@
         carthub.client.messageReceived = function (message) {
 
             write(message.NewCartItem, newCartItemH1, newCartItemDiv);
+            write(message.NextPrediction, nextPredictionH1, nextPredictionDiv);
 
         };
 
@@ -38,14 +43,15 @@
         function getItem() {
             $.connection.hub.start().done(function () {
                 carthub.server.connect(userip, $("#newCartItemH1").text());
-                carthub.server.send();
+                carthub.server.send(userip, $("#newCartItemH1").text());
+               
             });
-
-            
         };
 
         function write(message, textdiv, outerdiv) {
             textdiv.innerHTML = message;
             outerdiv.replaceChild(textdiv, textdiv);
         }
+
+
     </script>
